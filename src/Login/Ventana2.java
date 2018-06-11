@@ -1,5 +1,7 @@
 package Login;
 
+import javax.swing.JOptionPane;
+
 public class Ventana2 extends javax.swing.JFrame {
 
     /**
@@ -14,54 +16,89 @@ public class Ventana2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        freVentana2 = new javax.swing.JLabel();
-        btnRegresar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblOpcion = new javax.swing.JLabel();
+        jcbOpciones = new javax.swing.JComboBox<>();
+        lblimagenes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("freVentana2"); // NOI18N
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        freVentana2.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
-        freVentana2.setText("Acceso Correcto");
+        lblOpcion.setBackground(new java.awt.Color(255, 255, 204));
+        lblOpcion.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        lblOpcion.setForeground(new java.awt.Color(51, 51, 255));
+        lblOpcion.setText("Selecciona Una Opción:");
+        lblOpcion.setName(""); // NOI18N
 
-        btnRegresar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        btnRegresar.setText("REGRESAR");
-        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+        jcbOpciones.setBackground(new java.awt.Color(102, 255, 204));
+        jcbOpciones.setForeground(new java.awt.Color(153, 0, 51));
+        jcbOpciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "**********", "TENIS", "ZAPATILLAS", "ZAPATOS" }));
+        jcbOpciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegresarActionPerformed(evt);
+                jcbOpcionesActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(94, Short.MAX_VALUE)
-                .addComponent(freVentana2)
-                .addGap(90, 90, 90))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(btnRegresar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        lblimagenes.setText("jLabel1");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(lblOpcion))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(lblimagenes))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(jcbOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(freVentana2)
-                .addGap(51, 51, 51)
-                .addComponent(btnRegresar)
-                .addContainerGap(69, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(lblOpcion)
+                .addGap(18, 18, 18)
+                .addComponent(jcbOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(lblimagenes)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        new Principal().setVisible(true);
-           this.dispose();
-    }//GEN-LAST:event_btnRegresarActionPerformed
+    private void jcbOpcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbOpcionesActionPerformed
+            int op = jcbOpciones.getSelectedIndex();
+        
+        switch (op){
+            case 0: JOptionPane.showMessageDialog(null, "No Hay Opción Seleccionada", "Opción Seleccionada" , JOptionPane.INFORMATION_MESSAGE);
+                lblOpcion.setText("No Hay Opción Seleccionada");
+                lblimagenes.setText("NO hay opción seleccionada");
+            break;
+            case 1: JOptionPane.showMessageDialog(null, "TENIS", "Opción Seleccionada" , JOptionPane.INFORMATION_MESSAGE);
+                lblOpcion.setText("Selecciona TENIS");
+                lblimagenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TENIS.jpg")));
+            break;
+            case 2: JOptionPane.showMessageDialog(null, "ZAPATILLAS", "Opción Seleccionada" , JOptionPane.INFORMATION_MESSAGE); 
+                lblOpcion.setText("Selecciona ZAPATILLAS");
+                lblimagenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ZAPATILLAS.jpg")));
+            break;
+            case 3: JOptionPane.showMessageDialog(null, "ZAPATOS", "Opción Seleccionada" , JOptionPane.INFORMATION_MESSAGE);
+                lblOpcion.setText("Selecciona ZAPATOS");
+                lblimagenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ZAPATOS.jpg")));
+            break;
+        }
+    }//GEN-LAST:event_jcbOpcionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,7 +136,9 @@ public class Ventana2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel freVentana2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> jcbOpciones;
+    private javax.swing.JLabel lblOpcion;
+    private javax.swing.JLabel lblimagenes;
     // End of variables declaration//GEN-END:variables
 }

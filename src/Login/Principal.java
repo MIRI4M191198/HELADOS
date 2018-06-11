@@ -43,15 +43,15 @@ public class Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel4.setText("Bienvenido A Mi Tienda");
+        jLabel4.setFont(new java.awt.Font("Bauhaus 93", 0, 18)); // NOI18N
+        jLabel4.setText("Bienvenido tienda \"M&A\"");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
+                .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(70, 70, 70))
         );
@@ -75,6 +75,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel3.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 25, 103, -1));
         jPanel3.add(pfContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 64, 103, -1));
 
+        btnCerrar.setBackground(new java.awt.Color(204, 255, 204));
         btnCerrar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btnCerrar.setText("CERRAR");
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +85,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel3.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 107, -1, -1));
 
+        btbEntrar.setBackground(new java.awt.Color(204, 153, 255));
         btbEntrar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btbEntrar.setText("ENTRAR");
         btbEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +114,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
